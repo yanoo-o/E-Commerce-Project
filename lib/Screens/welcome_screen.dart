@@ -1,4 +1,4 @@
-import 'package:farmbili_2/Screens/auth/signup_page.dart';
+import 'package:farmbili_2/Screens/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:farmbili_2/constants.dart';
 import 'package:farmbili_2/Screens/login_page.dart';

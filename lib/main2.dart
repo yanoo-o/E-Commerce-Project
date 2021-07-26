@@ -10,6 +10,38 @@ import 'package:farmbili_2/Screens/login_page.dart';
 import 'package:farmbili_2/Screens/homepage.dart';
 
 void main() {
+  //WidgetsFlutterBinding.ensureInitialized();
+  runApp(FarmBili());
+}
+
+class FarmBili extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'FarmBili',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: "Lexend",
+      ),
+      home: WelcomeScreen(),
+    );
+  }
+}
+
+/*
+import 'package:flutter/material.dart';
+import 'package:flutter/src/material/colors.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+import 'package:farmbili_2/constants.dart';
+import 'package:farmbili_2/Screens/welcome_screen.dart';
+import 'package:farmbili_2/Screens/login_page.dart';
+import 'package:farmbili_2/Screens/homepage.dart';
+
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
 }
@@ -23,7 +55,7 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   /// The future is part of the state of our widget. We should not call `initializeApp`
   /// directly inside [build].
- // final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+  // final Future<FirebaseApp> _initialization = Firebase.initializeApp();
   Future<FirebaseApp> _initialization() async {
     FirebaseApp firebaseApp = await Firebase.initializeApp();
 
@@ -31,9 +63,9 @@ class _AppState extends State<App> {
 
     if (user != null) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-            builder: (context) => HomePage(user: user,)
-        )
+          MaterialPageRoute(
+              builder: (context) => HomePage(user: user,)
+          )
       );
     } return firebaseApp;
   }
@@ -56,7 +88,7 @@ class _AppState extends State<App> {
 
         // Otherwise, show something whilst waiting for initialization to complete
         return Center(
-            child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(),
         );
       },
     );
@@ -74,7 +106,8 @@ class FarmBili extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Lexend",
       ),
-      home: LoginPage(),
+      home: WelcomeScreen(),
     );
   }
 }
+*/
