@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "122559735889",
+    "project_id": "farmbili-7975b",
+    "storage_bucket": "farmbili-7975b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122559735889:android:e560c86cb52ec8c98b7070",
+        "android_client_info": {
+          "package_name": "com.farmbili.prototype.farmbili_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122559735889-pljombeq4abodo9nhqkmciltabf4k2qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.farmbili.prototype.farmbili_2",
+            "certificate_hash": "6782c25760ec0a9e4773982f9d6ab580417c30c5"
+          }
+        },
+        {
+          "client_id": "122559735889-k9as1ij2gnd3dr7oes1bu42uhbug4qib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhbWsrOJOZEnoi4rx4_Qsp0leT8hm_qA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122559735889-k9as1ij2gnd3dr7oes1bu42uhbug4qib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
