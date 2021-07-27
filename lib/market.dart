@@ -2,7 +2,9 @@ import 'package:farmbili_2/main.dart';
 import 'package:flutter/material.dart';
 import 'package:farmbili_2/market.dart';
 import 'package:farmbili_2/Widgets/widget.dart';
+import 'package:farmbili_2/Widgets/Cart.dart';
 import 'package:farmbili_2/Widgets/search.dart';
+import 'package:farmbili_2/animations/ScaleRoute.dart';
 
 
 
@@ -39,9 +41,9 @@ class _MarketState extends State<Market> {
             icon: Icon(
               Icons.shopping_cart,
               color: Colors.white,
-
             ),
             onPressed: (){
+              Navigator.push(context, ScaleRoute(page: Cart()));
             },
           ),
           ],
@@ -51,33 +53,63 @@ class _MarketState extends State<Market> {
         child: Column(
           children: <Widget>[
             SizedBox(height:20),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(' What would you like to buy?', style: TextStyle(
-                color: Color(0xFF3a3737),
-                fontSize: 25,
-                fontWeight: FontWeight.w500,),
-              ),
+            Container(
+                height:150.0,
+                width: 500.0,
+                child: Stack(
+                    children: [
+                      Align(
+                        alignment: Alignment(-0.8,-0.2),
+                        child: Text(
+                          'What would you like to Buy?',
+                          style: TextStyle(
+                            fontSize: 20, color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment(-0.83,0.25),
+                        child: Text(
+                          'FarmBili offers a variety of goods. \nFresh from Farms at your doorstep. ',
+                          style: TextStyle(
+                            fontSize: 12, color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/logo_only.png'),
+                    fit: BoxFit.contain,
+                    alignment: Alignment.centerRight,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                )
             ),
             SizedBox(height:10),
             SearchWidget(),
             SizedBox(height:10),
             Container(
               height:200.0,
-              width: 500.0,
+              width: 510.0,
               child:Align(
                 alignment: Alignment(-0.9, 0.8),
                 child: Text(
-                'Promos & Vouchers',
+                'My Farm',
                 style: TextStyle(
                   fontSize: 20, color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               ),
               decoration: BoxDecoration(
                 color: Colors.blueGrey,
                 image: DecorationImage(
-                  image: AssetImage('assets/images/promo.png'),
+                  image: AssetImage('assets/images/farm.png'),
                   fit: BoxFit.contain,
                   alignment: Alignment.centerRight,
                 ),
@@ -86,7 +118,7 @@ class _MarketState extends State<Market> {
             ),
             SizedBox(height:10),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
               Container(
                 height: 200.0,
@@ -110,13 +142,14 @@ class _MarketState extends State<Market> {
                     borderRadius: BorderRadius.circular(10),
                   )
               ),
+                SizedBox(width:10),
                 Container(
                     height: 200.0,
                     width: 250.0,
                     child:Align(
-                      alignment: Alignment(-0.9, 0.8),
+                      alignment: Alignment(-0.8, 0.8),
                       child: Text(
-                        'Pick-Up',
+                        'Promos & Vouchers',
                         style: TextStyle(
                           fontSize: 20, color: Colors.white,
                         ),
@@ -125,9 +158,9 @@ class _MarketState extends State<Market> {
                     decoration: BoxDecoration(
                       color: Colors.lightGreen,
                       image: DecorationImage(
-                        image: AssetImage('assets/images/market.png'),
+                        image: AssetImage('assets/images/promo.png'),
                         scale: 0.4,
-                        alignment: Alignment.bottomRight,
+                        alignment: Alignment.topRight,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     )
@@ -149,6 +182,7 @@ class _MarketState extends State<Market> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+                    SizedBox(width:10),
                     Container(
                       height: 175.0,
                       width: 250.0,
