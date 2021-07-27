@@ -74,6 +74,7 @@ class FarmBili extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Lexend",
       ),
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }

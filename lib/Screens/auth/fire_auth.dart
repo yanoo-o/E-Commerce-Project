@@ -6,6 +6,7 @@ class FireAuth {
     required String name,
     required String email,
     required String password,
+    required String userType,
   }) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;

@@ -1,3 +1,6 @@
+import 'package:farmbili_2/Screens/login_page.dart';
+import 'package:farmbili_2/Screens/signup_page.dart';
+
 class Validator {
   static String? validateName({required String? name}) {
     if (name == null) {
@@ -34,8 +37,19 @@ class Validator {
       return 'Password can\'t be empty';
     } else if (password.length < 6) {
       return 'Enter a password with length at least 6';
-    }
+    } return null;
+  }
 
-    return null;
+  static String? validateConfirmPassword({required String? confirmPassword}) {
+    if (confirmPassword == null) {
+      return null;
+    }
+    if (confirmPassword.isEmpty) {
+      return 'Please confirm your password';
+    } else if (confirmPassword.length < 6) {
+      return 'Enter a password with length at least 6';
+    } /* else if (confirmPassword != _passwordTextController.text) {
+      return 'Passwords don\'t match';
+    }*/ return null;
   }
 }

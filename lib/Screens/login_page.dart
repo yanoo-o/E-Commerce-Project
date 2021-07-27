@@ -54,12 +54,14 @@ class _LoginPageState extends State<LoginPage> {
                   if (snapshot.connectionState == ConnectionState.done) {
                     return Padding(
                       padding: const EdgeInsets.only(left: 24.0, right: 24.0),
+                      child: SingleChildScrollView(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          /*Image.asset('assets/images/logo_withtext.png',
+                          SizedBox(height:70),
+                          Image.asset('assets/images/logo_withtext.png',
                               width: double.infinity,
-                              height: size.height * 0.5),*/
+                              height: 200),
                           // TODO: change the logo :)))
                           Form(
                             key: _formKey,
@@ -84,6 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                                 TextFormField(
                                   controller: _passwordTextController,
                                   focusNode: _focusPassword,
+                                  obscureText: true,
                                   validator: (value) =>
                                       Validator.validatePassword(
                                           password: value),
@@ -211,7 +214,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ],
-                      ),
+                      )),
                     );
                   }
                   return Center(
