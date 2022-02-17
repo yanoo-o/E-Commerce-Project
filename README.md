@@ -1,6 +1,6 @@
-# farmbili_2
+# Farm Bili
 
-An app that connects farmers directly to buyers.
+An app that connects farmers directly to buyers. Used in the Accenture Program the Future competition, Farm Bili app is an e-commerce project that would help Filipino farmers increase their earnings while greatly reducing food waste due to uncoordinated market flow.
 
 ## Getting Started
 
